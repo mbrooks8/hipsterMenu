@@ -2097,10 +2097,10 @@ a {
 
 @media only screen and (min-width: 601px) {
   .container {
-    width: 80%; } }
+    width: 70%; } }
 @media only screen and (min-width: 993px) {
   .container {
-    width: 70%; } }
+    width: 50%; } }
 .row {
   margin-left: auto;
   margin-right: auto;
@@ -2369,6 +2369,37 @@ a {
       .row .col.offset-l12 {
         margin-left: 100%; } }
 
+.mainTranslate {
+  transform: translate(0%, 0%);
+  transition: all 0.2s ease; }
+
+@media only screen and (min-width: 601px) {
+  .mainTranslate {
+    transform: translate(20%, -30%); } }
+@media only screen and (min-width: 993px) {
+  .mainTranslate {
+    transform: translate(30%, -30%); } }
+.card1 {
+  width: 100%; }
+
+@media only screen and (min-width: 601px) {
+  .card1 {
+    width: 90%; } }
+@media only screen and (min-width: 993px) {
+  .card1 {
+    width: 80%; } }
+.card1text {
+  padding-left: 10%;
+  padding-right: 10%; }
+
+@media only screen and (min-width: 601px) {
+  .card1 {
+    padding-left: 10%;
+    padding-right: 15%; } }
+@media only screen and (min-width: 993px) {
+  .card1 {
+    padding-left: 10%;
+    padding-right: 20%; } }
 .imgDiv {
   height: 100%;
   width: 100%;

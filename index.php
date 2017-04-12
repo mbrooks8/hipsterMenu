@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Mexi Red</title>
+		<title>Hipster Menu</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 		<link href="./css/poverty.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -16,39 +16,13 @@
 
 	</head>
 
-	<body>
-		<nav class="fixed">
-			<div class="container">
-				<div class="nav-wrapper">
-					<a href="#!" class="logo">HIRE ME</a>
-					<ul class="right hide-on-med-and-down">
-						<li><a href="#welcome">Home</a></li>
-						<li><a href="#Link 1">Menu</a></li>
-						<li><a href="#Link 2">Catering</a></li>
-						<li><a href="#Link 2">About Us</a></li>
-					</ul>
-					<ul class="right hide-on-large-only">
-						<li><a class="sideToggle"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+<style>
+	.bodyBackground{
+		 background: linear-gradient(to bottom left, #DDE3E6, #D4DDE4);
+	}
+	</style>
 
-		<div class="sidebar" id="side">
-			<div class="sideHeader" style="text-align:center;">
-				<div class="sideHeader" style="text-align:center;">
-					<a href="citris.ucmerced.edu" class="logo">I NEED MONEY</a>
-				</div>
-			</div>
-			<div class="sideBody">
-				<ul>
-					<li><a href="#welcome">Home</a></li>
-					<li><a href="#Link 1">Menu</a></li>
-					<li><a href="#Link 2">Catering</a></li>
-					<li><a href="#Link 2">About Us</a></li>
-				</ul>
-			</div>
-		</div>
+	<body class="bodyBackground">
 		<div class="site-content" style="" id="replace">
 		</div>
 	</body>

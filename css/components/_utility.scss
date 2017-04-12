@@ -1,7 +1,51 @@
 
 
+.mainTranslate{
+	transform:translate(0%,0%);
+	transition: all 0.2s ease;
+}
 
+@media #{$medium-and-up} {
+	.mainTranslate {
+		transform:translate(20%,-30%);
+	}
+}
+@media #{$large-and-up} {
+	.mainTranslate {
+		transform:translate(30%,-30%);
+	}
+}
 
+.card1{
+	width:100%;
+}
+@media #{$medium-and-up} {
+	.card1 {
+		width:90%;
+	}
+}
+@media #{$large-and-up} {
+	.card1 {
+		width:80%;
+	}
+}
+
+.card1text{
+	padding-left:10%;
+	padding-right:10%;
+}
+@media #{$medium-and-up} {
+	.card1 {
+	padding-left:10%;
+	padding-right:15%;
+	}
+}
+@media #{$large-and-up} {
+	.card1 {
+	padding-left:10%;
+	padding-right:20%;
+	}
+}
 
 .imgDiv
 {
