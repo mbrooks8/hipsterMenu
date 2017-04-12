@@ -1,0 +1,45 @@
+.animation-element {
+	opacity: 0;
+	position: relative;
+
+	&.slide-left {
+		opacity: 0;
+		transition: all 750ms linear;
+		transform: translate3d(-100px, 0px, 0px);
+		&.in-view {
+			opacity: 1;
+			transform: translate3d(0px, 0px, 0px);
+		}
+	}
+
+	&.slide-right {
+		opacity: 0;
+		transition: all 750ms linear;
+		transform: translate3d(100px, 0px, 0px);
+		&.in-view {
+			opacity: 1;
+			transform: translate3d(0px, 0px, 0px);
+		}
+		&.fast {
+			opacity: 0;
+			transition: all 250ms linear;
+			transform: translate3d(100px, 0px, 0px);
+			&.in-view {
+				opacity: 1;
+				transform: translate3d(0px, 0px, 0px);
+			}
+		}
+	}
+
+	&.fade-in {
+		opacity: 0;
+		transition: all 1000ms linear;
+		&.in-view {
+			opacity: 1;
+			transform: translate3d(0px, 0px, 0px);
+		}
+	}
+
+
+
+}

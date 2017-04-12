@@ -1,0 +1,64 @@
+/* Style Placeholders */
+
+::-webkit-input-placeholder {
+	color: $placeholder-text-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: $placeholder-text-color;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $placeholder-text-color;
+}
+
+:-ms-input-placeholder {
+	color: $placeholder-text-color;
+}
+
+input{
+	background-color: transparent;
+	border: none;
+	width:100%;
+	margin-bottom:$input-margin-bottom;
+	border-bottom: $input-border;
+	border-color:$input-border-color;
+	transition:all .2s ease;
+	outline: none;
+	height: $input-height;
+	font-size: $input-font-size;
+	margin: $input-margin;
+	padding: $input-padding;
+	box-shadow: none;
+	box-sizing: content-box;
+
+	&:focus{
+		border-bottom: 1px solid $input-focus-color;
+		box-shadow: 0 1px 0 0 $input-focus-color;
+	}
+	&:focus:not([readonly])+label {
+		color: $input-focus-color;
+		top:-5rem;
+
+	}
+
+}
+
+textarea{
+	width: 100%;
+	height: $input-height;
+	background-color: transparent;
+}
+label{
+	height: $input-height;
+	font-size: $input-font-size;
+	position:relative;
+	top:-3rem;
+	left:0;
+	pointer-events: none;
+	transition:all .2s ease;
+
+}
+form{
+	position:relative;
+}

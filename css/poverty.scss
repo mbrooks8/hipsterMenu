@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+@import "components/color";
+
+// Variables;
+
+//Fonts
+$roboto-font-path:"../fonts/roboto/";
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+$primary-color: color("red","darken-1") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color:#1ABD5F !default;
+
+$accent-color: #1ABD5F !default;
+$success-color: #00A490 !default;
+$error-color: #EF4B23 !default;
+$link-color: $primary-color !default;
+
+$primary-text-color: color("shades", "black") !default;
+
+// ==========================================================================
+// Media Query Ranges
+// ==========================================================================
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+// ==========================================================================
+// Template
+// ==========================================================================
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+// ==========================================================================
+// Text
+// ==========================================================================
+// Header Styles
+$h1-fontsize: 4.2rem !default;
+$h2-fontsize: 3.56rem !default;
+$h3-fontsize: 2.92rem !default;
+$h4-fontsize: 2.28rem !default;
+$h5-fontsize: 1.64rem !default;
+$h6-fontsize: 1.2rem !default;
+// ==========================================================================
+//NavBar
+// ==========================================================================
+$nav-height:64px !default;
+$nav-color:rgba(26, 189, 95,.9);
+$nav-text-color:color("shades", "white") !default;
+$nav-text-color-dark:#30D2AB !default;
+$nav-text-size: 1.25rem !default;
+$nav-logo-text-size: 2.1rem !default;
+// ==========================================================================
+//Side NavBar
+// ==========================================================================
+$side-width:245px;
+// ==========================================================================
+//Button
+// ==========================================================================
+$button-border: none !default;
+$button-background-color:color("red","lighten-1") !default;
+$button-background-color-hover:lighten($button-background-color, 5%) !default;
+$button-floating-size:56px;
+$button-floating-color:$accent-color !default;
+$button-floating-background-hover:lighten($button-floating-color, 5%) !default;
+$button-large-icon-font-size:1.5rem !default;
+$button-font-size: 1.3rem !default;
+$button-height: 36px !default;
+$button-padding: .3rem 2rem !default;
+$button-radius: 2px !default;
+$button-large-height: 50px !default;
+// ==========================================================================
+// Chip
+// ==========================================================================
+$chip-padding: 0 25px;
+$chip-font-size:16px;
+$chip-line-height:50px;
+$chip-border-radius:25px;
+$chip-text-color:black;
+$chip-background-color: #f1f1f1;
+$chip-cursor: pointer;
+$closebtn-font-weight:bold;
+$closebtn-font-size:1.1rem;
+$closebtn-float:right;
+$closebtn-padding-left:10px;
+// ==========================================================================
+// Table
+// ==========================================================================
+$table-border-collapse: collapse !default;
+$table-width: 50% !default;
+$table-border-bottom: 1px solid #ddd !default;
+$table-padding:8px !default;
+
+$table-border-color: #d0d0d0 !default;
+$table-striped-color: #f2f2f2 !default;
+// ==========================================================================
+// Tooltip
+// ==========================================================================
+$tooltip-width: 120px;
+$tooltip-background-color: black;
+$tooltip-padding:5px 0;
+// ==========================================================================
+// Forms
+// ==========================================================================
+// Text Inputs + Textarea
+$input-height: 3rem !default;
+$input-border-color: color("grey", "base") !default;
+$input-border: 1px solid $input-border-color !default;
+$input-error-color: $error-color !default;
+$input-success-color: $success-color !default;
+$input-focus-color: $secondary-color !default;
+$input-font-size: 1rem !default;
+$input-margin-bottom: 20px;
+$input-margin: 0 0 $input-margin-bottom 0 !default;
+$input-padding: 0 !default;
+$input-transition: all .3s !default;
+$label-font-size: .8rem !default;
+$input-invalid-border: 1px solid $input-error-color !default;
+$placeholder-text-color: lighten($input-border-color, 20%) !default;
+
+// ==========================================================================
+// ==========================================================================
+// Stolen reset scss;
+@import "components/reset";
+// components;
+@import "components/banner";
+@import "components/template";
+@import "components/utility";
+@import "components/sidenav";
+@import "components/navBar";
+@import "components/text";
+@import "components/card";
+@import "components/button";
+@import "components/chip";
+@import "components/table";
+@import "components/popup";
+@import "components/tooltip";
+@import "components/editable";
+@import "components/animation";
+@import "components/forms";

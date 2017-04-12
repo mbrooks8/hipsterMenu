@@ -1,0 +1,42 @@
+
+.section{
+	padding:0px;
+}
+
+.row {
+	margin-bottom:0px;
+}
+
+#picture2{
+	background-color:#ff3f34;
+}
+#myDiv2{
+	background-color:rgba(0,0,0,.1) !important;
+	/*My computer cant see #f7f7f7 for some reason check later ---*/
+}
+.divider{
+	width:300px;
+	margin-top: 0px;
+	margin-bottom:20px;
+}
+#iWishIWasWhite{
+	color:white;
+}
+
+.divider {
+	margin-top: 0px !important;
+}
+
+#myDiv{
+	background-color:white;
+}
+
+.specialLink{
+	text-decoration: none;
+	color:white;
+	transition: all .2s ease;
+}
+.specialLink:hover{
+	cursor: pointer;
+	color:#1ABD5F;
+}

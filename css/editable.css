@@ -1,0 +1,45 @@
+.editButton,.submitButton
+{
+	font-size:18px;
+	position: absolute !important;
+	top: -13px !important;
+	right: 20px !important;
+	height: 26px !important;
+	width: 26px !important;
+	background: white !important;
+	border-radius: 50% !important;
+	box-shadow: 0px 0px 5px 1px #5F5F5F !important;
+	text-align: center;
+	display: block;
+}
+.editButton div
+{
+	position: relative;
+	height: 26px;
+	width: 26px;
+}
+.submitButton div
+{
+	position: relative;
+	height: 26px;
+	width: 26px;
+}
+.editButton div i
+{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.submitButton div i
+{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+
+
+.editable
+{
+	position:relative;
+}

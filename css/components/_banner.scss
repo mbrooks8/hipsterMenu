@@ -1,0 +1,149 @@
+//SHitty banner
+
+.shittyBanner{
+	width:60%;
+	padding:30px;
+	border-radius:2px;
+	background-color:$primary-color;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin:0 auto;
+}
+
+//main banner
+.banner{
+	padding:0px;
+	margin:0px;
+	min-height:80vh;
+	max-height:80vh;
+	width:100%;
+	background-color:$primary-color;
+	background-size:100%;
+	background-position: center;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-color:$primary-color;
+	/*background-image: $banner-image;*/
+	position:relative;
+
+	height:500px;
+
+	&.small{
+		min-height:40vh;
+		max-height:40vh;
+	}
+
+	.bar{
+		position:absolute;
+		top:0;
+		left:0;
+		background-color:$primary-color;
+		height:100%;
+		width:6%;
+		max-width:64px;
+
+		@media only screen and (max-width: $small-screen) {
+			width:0px;
+		}
+
+		a {
+			text-decoration: none;
+			color:white;
+			transition: all .2s ease;
+			&:hover{
+				cursor: pointer;
+				color:$secondary-color;
+			}
+		}
+
+	}
+
+	.imgOverlay{
+		position:absolute;
+		background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5),rgba(0,0,0,0));
+		height:100%;
+		width:100%;
+	}
+	.content
+	{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+
+	}
+
+	h1,h2,h3,h4,h5,h6,p,a{
+		margin:0;
+		text-transform: uppercase;
+	}
+
+	h1{
+		margin: 0;
+		letter-spacing: 5px;
+		padding: 7px 0 12px 0;
+		display: block;
+		font-weight: normal;
+		font-size: 5rem;
+		color: $primary-color;
+		/*text-shadow: 1px 1px 8px #000000;*/
+	}
+
+	p{
+		font-size: 20px;
+		color:#f3f0f5;
+	}
+	.floating{
+		z-index: 1;
+	}
+
+	@media only screen and (max-width: $medium-screen) {
+		h1{
+			font-size: 4.5rem;
+		}
+
+		p{
+			font-size: 16px;
+		}
+		background-size:150% auto !important;
+		min-height:60vh;
+	}
+	@media only screen and (max-width: $small-screen) {
+		h1{
+			font-size: 2.5rem;
+		}
+
+		p{
+			font-size: 14px;
+		}
+		background-size:150% auto !important;
+		min-height:40vh;
+	}
+
+}
+.imgBanner
+{
+	overflow:hidden;
+	height:500px;
+	position: relative;
+	background-color:$primary-color;
+	.imgDiv
+	{
+		height: 100%;
+		width: 100%;
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+		background-size: cover !important;
+	}
+	div
+	{
+		height: 100%;
+		width:100%;
+		top:0px;
+		position: absolute;
+		text-align: center;
+	}
+	&.small{
+		height:250px;
+	}
+}

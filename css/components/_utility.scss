@@ -1,0 +1,186 @@
+
+
+
+
+
+.imgDiv
+{
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-size: cover !important;
+}
+.roundme {
+	border-radius: 50%;
+	border:1px solid white;
+	background: transparent;
+	padding: 5px;
+	&:hover{
+		border: 1px solid #327DF8;
+		i{
+			color:#30D2AB;
+		}
+	}
+}
+
+#things{
+	position:absolute;
+	bottom:10%;
+	left:0px;
+	padding-left:4%;
+	padding-right:4%;
+}
+
+@media #{$medium-and-up} {
+	things {
+		padding-left:6%;
+		padding-right:6%;
+	}
+}
+@media #{$large-and-up} {
+	things {
+		padding-left:8%;
+		padding-right:8%;
+	}
+}
+
+.bottomText{
+	position:absolute;
+	bottom:32px;
+	width:100%;
+	p{
+		color:rgba(255,255,255,.4);
+	}
+}
+
+
+img{
+	pointer-events: all;
+}
+.valign{
+	display: flex;
+	align-items:center;
+	justify-content: center;
+}
+// Text changes
+em { font-style: italic; }
+strong { font-weight: 500; }
+small { font-size: 75%; }
+.light { font-weight: 300; }
+.thin { font-weight: 200; }
+
+// color classes
+.secondary{
+	color:$secondary-color;
+}
+.accent{
+	color:$accent-color;
+}
+.primary{
+	color:$primary-color;
+}
+
+// Dividers
+
+.divider {
+	height: 1px;
+	overflow: hidden;
+	background-color: color("grey", "lighten-2");
+
+}
+
+/*hide scrolbar*/
+html {
+	overflow: scroll;
+	overflow-x: hidden;
+
+}
+//::-webkit-scrollbar {
+//	width: 0px;  /* remove scrollbar space */
+//	background: transparent;  /* optional: just make scrollbar invisible */
+//}
+/* optional: show position indicator in red */
+//::-webkit-scrollbar-thumb {
+//	background: transparent;
+//}
+
+//Sticky Footer
+
+body {
+	min-height: 100vh;
+	flex-direction: column;
+	background:white;
+	overflow-x:hidden;
+}
+
+.site-content {
+	position: relative;
+	transition: margin-left 0.5s ease;
+	@media screen and (min-width: 680px) {
+		&.fixed
+		{
+			margin-left: 245px;
+		}
+	}
+}
+
+/*Utility Classes*/
+
+.hide {
+	display: none !important;
+}
+
+// Text Align
+.left-align {
+	text-align: left;
+}
+.right-align {
+	text-align: right
+}
+.center, .center-align {
+	text-align: center;
+}
+
+.left {
+	float: left !important;
+}
+.right {
+	float: right !important;
+}
+
+// Z-levels
+.z-depth-0 {
+	box-shadow: none !important;
+}
+.z-depth-1 {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+.z-depth-1-half {
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+.z-depth-2 {
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+.z-depth-3 {
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+.z-depth-4 {
+	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+.z-depth-5 {
+	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+//hoverable
+.hoverable {
+	transition: box-shadow .25s;
+	box-shadow: 0;
+}
+
+.hoverable:hover {
+	transition: box-shadow .25s;
+	@extend .z-depth-2;
+	cursor: pointer;
+}
+

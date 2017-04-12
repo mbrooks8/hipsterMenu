@@ -1,0 +1,43 @@
+table {
+	border-collapse: $table-border-collapse;
+	width: 100%;
+
+	&.bordered > tbody > tr > td{
+		border-bottom: 1px solid $table-border-color;
+	}
+
+	&.striped > tbody{
+		> tr:nth-child(odd) {
+			background-color: $table-striped-color;
+		}
+		> tr > td {
+			border-radius: 0;
+		}
+
+	}
+
+	&.highlight > tbody > tr {
+		transition: background-color .25s ease;
+		&:hover {
+			background-color: $table-striped-color;
+		}
+	}
+
+	&.centered{
+		tr th, tr td{
+			text-align:center;
+		}
+	}
+}
+
+thead {
+	border-bottom: 1px solid $table-border-color;
+}
+
+td, th{
+	padding: 15px 5px;
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+	border-radius: 2px;
+}

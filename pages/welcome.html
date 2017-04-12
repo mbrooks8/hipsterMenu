@@ -1,0 +1,483 @@
+<div style="padding-top:64px; background-color:black;"></div>
+
+<div class="banner">
+	<div style="position:absolute; background:linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4),rgba(0,0,0,.6)); height:100%; width:100%;"></div>
+	<div class="valign content">
+		<div class="container center">
+			<h1 class="white-text" style="padding-bottom:0px;">J & R Tacos</h1>
+			<p> Creating A Healthy Twist on Mexican Cuisine</p>
+			<br>
+			<div class="button raised" style="border-radius:20px;">Make an order</div>
+
+			<p style="padding-top:20px;">
+				<a class="specialLink" href="https://www.facebook.com/jandrtacos">Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="specialLink" href="https://www.instagram.com/jandrtacos/">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="specialLink" href="https://twitter.com/jandrtacos">Instagram</a>
+			</p>
+		</div>
+	</div>
+	<div class="imgDiv" style="background: url(./img/banner.jpg)"></div>
+</div>
+<div class="row">
+
+	<script>
+		$( document ).ready(function() {
+			var y = $( "#myDiv" ).height();
+			var y2 = $( "#picture2" ).height();
+			var y3 = $( "#myDiv3" ).height();
+			var y4 = $( "#myDiv4" ).height();
+			var y5 = $( "#myDiv5" ).height();
+			$( "#picture1" ).height(y);
+			$( "#myDiv2" ).height(y2);
+			$( "#picture3" ).height(y3);
+			$( "#picture4" ).height(y4);
+			$( "#map" ).height(y5);
+		});
+		$( window ).resize(function() {
+			var y = $( "#myDiv" ).height();
+			var y2 = $( "#picture2" ).height();
+			var y3 = $( "#myDiv3" ).height();
+			var y4 = $( "#myDiv4" ).height();
+			var y5 = $( "#myDiv5" ).height();
+			$( "#picture1" ).height(y);
+			$( "#myDiv2" ).height(y2);
+			$( "#picture3" ).height(y3);
+			$( "#picture4" ).height(y4);
+			$( "#map" ).height(y5);
+		});
+
+		$(".boxed").click(function(){
+
+			var origin = $(this);
+			var windowWidth = window.innerWidth;
+			var windowHeight = window.innerHeight;
+			var originalWidth = origin.width();
+			var originalHeight = origin.height();
+
+			if (origin.hasClass('popOut-img1')){
+				origin.removeClass('popOut-img1');
+				origin.parent().removeClass('popOut-active');
+				$("#tempClass").remove();
+				console.log("fuckyourself");
+				return;
+			}
+
+			// Resize Image
+			var ratio = 0;
+			var widthPercent = originalWidth / windowWidth;
+			var heightPercent = originalHeight / windowHeight;
+			var newWidth = 0;
+			var newHeight = 0;
+
+
+			if (widthPercent > heightPercent) {
+				ratio = originalHeight / originalWidth;
+				newWidth = windowWidth * 0.9;
+				newHeight = windowWidth * 0.9 * ratio;
+
+				origin.addClass('popOut-img1');
+			}
+			else {
+				ratio = originalWidth / originalHeight;
+				newWidth = (windowHeight * 0.9) * ratio;
+				newHeight = windowHeight * 0.9;
+				origin.addClass('popOut-img1');
+			}
+
+			$("head").append("<div id='tempClass'></div>")
+
+			$("#tempClass").html("<style>.popOut-img1{width:"+newWidth+"px !important;height:"+newHeight+"px !important;position:relative;float:left;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1000;}.popOut-img1:hover{cursor:zoom-out;}</style>");
+
+			origin.parent().addClass('popOut-active');
+
+			$(window).scroll(function(){
+				origin.removeClass('popOut-img1');
+				origin.parent().removeClass('popOut-active');
+				$("#tempClass").remove();
+				console.log("fuckyourself");
+				$(window).unbind('scroll');
+			});
+
+			// Return on ESC
+			$(document).keyup(function(e) {
+
+				if (e.keyCode === 27) {   // ESC key
+					if (origin.parent().hasClass('popOut-active')) {
+						origin.removeClass('popOut-img1');
+						origin.parent().removeClass('popOut-active');
+						$("#tempClass").remove();
+						console.log("fuckyourself");
+					}
+				}
+			});
+		});
+
+	</script>
+	<style>
+
+		.popOut-active{
+			max-height: none !important;
+			top:0 !important;
+			left:0 !important;
+			z-index:999;
+			height:100vh !important;
+			width:100vw !important;
+			background-color:slategrey;
+			position: fixed !important;
+
+		}
+		.boxed{
+			transition:all .5s ease;
+		}
+		.boxed:hover{
+			filter: brightness(75%);
+			cursor: zoom-in;
+		}
+		.popOverlay{
+
+			position: absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			background:rgba(0,0,0,.75);
+			text-align:center;
+			transition:all .5s ease;
+			opacity:0;
+			-webkit-transition: opacity .25s ease;
+		}
+	</style>
+	<div class="col l5 hide-on-med-and-down" style="height:1px; padding:0; position:relative; overflow:hidden;" id="picture1">
+
+		<img src="./img/image.jpg" class="boxed" style="position:absolute; height:100%; width:auto; z-index:2;">
+
+	</div>
+
+	<div class="col l7" style="padding:0;" id="myDiv">
+		<div class="container" style="padding-top:5%;padding-bottom:5%;">
+			<div class="row">
+				<div class="col m7">
+					<h4>contact us</h4>
+					<h5 style="color:#E53935"><i class="fa fa-phone" aria-hidden="true"></i> 209-384-2923</h5>
+					<h5 style="color:#E53935">437 W Main St, Merced, CA 95340</h5>
+
+				</div>
+				<div class="col m5">
+					<h4>Hours</h4>
+					<h5 style="color:#E53935">Sun - Thur : 11am—9pm</h5>
+					<h5 style="color:#E53935">Fri - Sat : 11am—9pm</h5>
+				</div>
+			</div>
+
+		</div><!--end container-->
+		<div class="divider"></div>
+		<div style="margin-top:10%;"></div>
+		<div class="container">
+			<h1>welcome</h1>
+			<br>
+			<p>
+				It started with a vision and a sketch by two college students in 2004.
+				Owners Janna Rodriguez and Oscar Torres turned that vision into what is today a bustling kitchen and restaurant in the heart of Downtown Merced.
+				J&R Tacos opened in 2006, with one goal in mind: Create A Healthy Twist on Mexican Cuisine
+				<br><br>
+				Everything about J&R Tacos is authentic. From our menu to out methods to our decor. We are a locally owned independent little restaurant on Main Street with many ideas, a huge heart and a true love for our community.
+				The food is prepared with the health conscious in mind. It’s a nod to the past with an eye on the future of cuisine in America.
+			</p>
+			<div style="height:100px;" class="hide-on-med-and-down"></div>
+			<div style="height:20px;" class="hide-on-large-only"></div>
+			<div class="button raised" style="border-radius:20px;">Learn More</div>
+			<div style="height:200px;" class="hide-on-med-and-down"></div>
+			<div style="height:40px;" class="hide-on-large-only"></div>
+		</div><!--end container-->
+
+
+		<div class="hide-on-large-only" style="max-height:30vh; overflow:hidden;"><img src="./img/banner.jpg" style="width:100%;"></div>
+	</div>
+</div>
+
+<!--NEW THING ####################################-->
+<div class="row">
+	<div class="col s12 l5" style="height:1010px;" id="picture2">
+		<div class="container" id="iWishIWasWhite" style="margin-left:10%;margin-right:10%;">
+			<div style="margin-top:5%;"></div>
+			<table>
+				<thead>
+					<tr>
+						<th><h3>Dinners</h3></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Salads</td>
+						<td style="text-align:right;">from</td>
+						<td>$4.75</td>
+					</tr>
+					<tr>
+						<td>Specialties</td>
+						<td style="text-align:right;">from</td>
+						<td>$9.95</td>
+					</tr>
+					<tr>
+						<td>Burritos</td>
+						<td style="text-align:right;">from</td>
+						<td>$7.50</td>
+					</tr>
+					<tr>
+						<td>Tacos</td>
+						<td style="text-align:right;">from</td>
+						<td>$2.35</td>
+					</tr>
+					<tr>
+						<td>Quesadillas</td>
+						<td style="text-align:right;">from</td>
+						<td>$4.50</td>
+					</tr>
+					<tr>
+						<td>Mix It Up</td>
+						<td style="text-align:right;">from</td>
+						<td>$3.25</td>
+					</tr>
+					<tr>
+						<td>Soups & Sides</td>
+						<td style="text-align:right;">from</td>
+						<td>$1.50</td>
+					</tr>
+					<tr><td></td></tr>
+					<tr><td></td></tr>
+
+
+				</tbody>
+				<thead>
+					<tr>
+						<th><h3>Drinks</h3></th>
+
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Margaritas</td>
+						<td style="text-align:right;">from</td>
+						<td>$12.00</td>
+					</tr>
+					<tr>
+						<td>Mojitos</td>
+						<td style="text-align:right;">from</td>
+						<td>$6.00</td>
+					</tr>
+					<tr>
+						<td>Martinis</td>
+						<td style="text-align:right;">from</td>
+						<td>$9.00</td>
+					</tr>
+					<tr>
+						<td>Sangrias</td>
+						<td style="text-align:right;">from</td>
+						<td>$25.00</td>
+					</tr>
+					<tr>
+						<td>Wine</td>
+						<td style="text-align:right;">from</td>
+						<td>$13.00</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="col l7" style="padding:0;" id="myDiv2">
+		<div style="margin-top:5%;"></div>
+		<!--taco-->
+		<div class="container">
+			<div class="row">
+				<div class="col m4"></div>
+				<div class="col m8">
+					<h3>Tacos</h3>
+				</div>
+			</div>
+		</div>
+		<div class="divider hide-on-small-only" style="background-color:rgba(0,0,0,.1);"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col s4" style="max-height:150px; overflow:hidden;">
+					<img src="./img/taco.jpg" class="responsive-img boxed" style=" width:100%;">
+				</div>
+				<div class="col s8">
+					<p>Soft or crunchy? Tacos are good either way. There are dozens of different combinations. I think I need more text here about tacos that way I can see what happens when it wraps.</p>
+					<br>
+
+					<a><h6>Learn More</h6></a>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div><!--end container-->
+		<!--nachos-->
+		<div class="container">
+			<div class="row">
+				<div class="col m4"></div>
+				<div class="col m8">
+					<h3>nachos</h3>
+				</div>
+			</div>
+		</div>
+		<div class="divider hide-on-small-only" style="background-color:rgba(0,0,0,.1);"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col s4" style="max-height:150px; overflow:hidden;"><img src="./img/food2.jpg" class="responsive-img boxed" style=" width:100%;"></div>
+				<div class="col s8">
+					<p>Soft or crunchy? Tacos are good either way. There are dozens of different combinations. I think I need more text here about tacos that way I can see what happens when it wraps.</p>
+					<br>
+
+					<a><h6>Learn More</h6></a>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div><!--end container-->
+		<!--Burrito-->
+		<div class="container">
+			<div class="row">
+				<div class="col m4"></div>
+				<div class="col m8">
+					<h3>Burrito</h3>
+				</div>
+			</div>
+		</div>
+		<div class="divider hide-on-small-only" style="background-color:rgba(0,0,0,.1);"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col s4" style="max-height:150px; overflow:hidden;"><img src="./img/burrito.jpg" class="responsive-img boxed" style=" width:100%;"></div>
+				<div class="col s8">
+					<p>Soft or crunchy? Tacos are good either way. There are dozens of different combinations. I think I need more text here about tacos that way I can see what happens when it wraps.</p>
+					<br>
+
+					<a><h6>Learn More</h6></a>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div><!--end container-->
+	</div>
+</div>
+
+
+<!--2x2 area goes here-->
+<div class="hide-on-small-only">
+	<div class="row hide-on-med-only">
+
+		<div class="col l5 valign" style="height:300px; position:relative; overflow:hidden;" id="picture3">
+			<img src="./img/food1.jpg" class="boxed" style="position:absolute; height:auto; width:100%;">
+		</div>
+
+		<div class="col l7 valign" style="height:300px; position:relative; overflow:hidden;" id="myDiv3">
+			<img src="./img/food3.jpg" class="boxed" style="position:absolute; height:auto; width:100%;">
+		</div>
+	</div>
+	<div class="row hide-on-med-only">
+
+		<div class="col l5 valign" style="height:300px; position:relative; overflow:hidden;" id="picture4">
+			<img src="./img/food2.jpg" class="boxed" style="position:absolute; height:auto; width:100%;">
+		</div>
+
+		<div class="col l7 valign" style="height:300px; position:relative; overflow:hidden;" id="myDiv3">
+			<img src="./img/food4.jpg" class="boxed" style="position:absolute; height:auto; width:100%;">
+		</div>
+
+	</div>
+</div>
+
+<!--NEW THING ####################################-->
+<div class="row">
+	<style>
+
+		#myDiv5{
+
+		}
+	</style>
+	<div class="col s12 l5" style="padding:0;">
+
+		<script>
+			$(document).ready(function () {
+				$('#map').addClass('scrolloff');                // set the mouse events to none when doc is ready
+
+				$('#overlay').on("mouseup",function(){          // lock it when mouse up
+					$('#map').addClass('scrolloff');
+					//somehow the mouseup event doesn't get call...
+				});
+				$('#overlay').on("mousedown",function(){        // when mouse down, set the mouse events free
+					$('#map').removeClass('scrolloff');
+				});
+				$("#map").mouseleave(function () {              // becuase the mouse up doesn't work...
+					$('#map').addClass('scrolloff');            // set the pointer events to none when mouse leaves the map area
+					// or you can do it on some other event
+				});
+
+			});
+		</script>
+		<style>
+			.scrolloff{
+				pointer-events: none;
+			}
+		</style>
+		<div id="overlay">
+			<div class="map" id="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.734028178951!2d-120.48494248422392!3d37.30143697984838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809142fe16546a79%3A0x211b16b702a16b71!2s437+W+Main+St%2C+Merced%2C+CA+95340!5e0!3m2!1sen!2sus!4v1491111021658" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="col s12 l7" style="padding:0;" id="myDiv5">
+		<div class="container" style="padding-top:5%;padding-bottom:5%;">
+			<div class="row">
+				<div class="col m7">
+					<h4>contact us</h4>
+					<h5 style="color:#E53935"><i class="fa fa-phone" aria-hidden="true"></i> 209-384-2923</h5>
+					<h5 style="color:#E53935">437 W Main St, Merced, CA 95340</h5>
+
+				</div>
+				<div class="col m5">
+					<h4>Hours</h4>
+					<h5 style="color:#E53935">Sun - Thur : 11am—9pm</h5>
+					<h5 style="color:#E53935">Fri - Sat : 11am—9pm</h5>
+				</div>
+			</div>
+
+		</div><!--end container-->
+		<div class="divider hide-on-small-only"></div>
+		<div class="container">
+			<h3>Feedback</h3>
+
+			<style>
+			</style>
+
+			<form action="/action_page.php">
+				<input type="text" name="Name">
+				<label for="name">Name</label>
+				<br>
+				<input type="email" name="email">
+				<label for="email">Email</label>
+				<br>
+				<input type="text" name="Subject">
+				<label for="subject">Subject</label>
+				<br>
+				<textarea name="Text1" rows="5" value="Message"></textarea><br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<footer class="page-footer">
+	<div class="footer-copyright">
+		<div class="container">
+			© 2017 Copyright CITRIS All Rights Reserved
+			<a class="grey-text text-lighten-4 right" href="../php/login.php">Login</a>
+		</div>
+	</div>
+</footer>
