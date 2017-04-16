@@ -1,3 +1,48 @@
+.img2{
+	background-color:white;
+	max-height:100%;
+	max-width:100% !important;
+	position:absolute;
+z-index:1;
+	overflow:hidden;
+}
+@media #{$medium-and-up} {
+	.img2 {
+		max-height:85%;
+		max-width:60%;
+		transform:translate(75%,-13%);
+	}
+}
+@media #{$large-and-up} {
+	.img2 {
+		max-height:85%;
+		max-width:60%;
+		transform:translate(75%,-13%);
+	}
+}
+
+.card2{
+	background-color:white;
+	min-height:10px;
+	max-width:60%;
+	position:absolute;
+
+	padding-left:10%;
+	padding-right:10%;
+	padding-top:5%;
+	padding-bottom:5%;
+	transition:all .2s ease;
+}
+@media #{$medium-and-up} {
+	.card2 {
+		transform:translate(-20%,-10%);
+	}
+}
+@media #{$large-and-up} {
+	.card2 {
+		transform:translate(-20%,-10%);
+	}
+}
 
 
 .mainTranslate{
@@ -36,14 +81,14 @@
 }
 @media #{$medium-and-up} {
 	.card1 {
-	padding-left:10%;
-	padding-right:15%;
+		padding-left:10%;
+		padding-right:15%;
 	}
 }
 @media #{$large-and-up} {
 	.card1 {
-	padding-left:10%;
-	padding-right:20%;
+		padding-left:10%;
+		padding-right:20%;
 	}
 }
 
