@@ -1,22 +1,21 @@
 .img2{
-	background-color:white;
 	max-height:100%;
 	max-width:100% !important;
 	position:absolute;
-z-index:1;
-	overflow:hidden;
+	transform:translate(0%,40%);
+	transition:all 0.2s ease;
 }
 @media #{$medium-and-up} {
 	.img2 {
 		max-height:85%;
-		max-width:60%;
+		max-width:60% !important;
 		transform:translate(75%,-13%);
 	}
 }
 @media #{$large-and-up} {
 	.img2 {
 		max-height:85%;
-		max-width:60%;
+		max-width:60% !important;
 		transform:translate(75%,-13%);
 	}
 }
@@ -24,26 +23,25 @@ z-index:1;
 .card2{
 	background-color:white;
 	min-height:10px;
-	max-width:60%;
 	position:absolute;
-
+	z-index:2;
 	padding-left:10%;
 	padding-right:10%;
 	padding-top:5%;
 	padding-bottom:5%;
-	transition:all .2s ease;
+	transition:all 0.2s ease;
 }
 @media #{$medium-and-up} {
 	.card2 {
 		transform:translate(-20%,-10%);
+		max-width:60%;
 	}
 }
-@media #{$large-and-up} {
+@media #{$small-and-down} {
 	.card2 {
-		transform:translate(-20%,-10%);
+		min-width:100%;
 	}
 }
-
 
 .mainTranslate{
 	transform:translate(0%,0%);

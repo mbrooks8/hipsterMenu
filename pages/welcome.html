@@ -6,8 +6,29 @@
 	}
 </style>
 <div class="container main" style="position:relative;">
-<img src="http://blog.caranddriver.com/wp-content/uploads/2015/01/2014-BMW-328d-xDrive-M-Sport-wagon-168.jpg" style="position:absolute; top:0; left:0; width:100%;">
-	<div class="valign" style="">
+	<script>
+		$( document ).ready(function() {
+			var y = $( "#myDiv" ).height();
+			$( "#picture1" ).height(y);
+			var y2 = $( "#img2thing" ).height();
+			$( "#img2thingthing" ).height(y2);
+			console.log(y2);
+
+		});
+		$( window ).resize(function() {
+			var y = $( "#myDiv" ).height();
+			$( "#picture1" ).height(y);
+			var y2 = $( "#img2thing" ).height();
+			$( "#img2thingthing" ).height(y2);
+console.log(y2);
+		});
+	</script>
+	<div style="height:10px; min-height:300px; max-height:100%; width:100%; overflow:hidden; position:absolute; top:0;left:0;" id="picture1">
+		<img src="http://blog.caranddriver.com/wp-content/uploads/2015/01/2014-BMW-328d-xDrive-M-Sport-wagon-168.jpg" style="height:100%; width:100%;">
+	</div>
+	<div class="valign" id="myDiv">
+
+
 		<h1 style="font-size:8em;text-align: center; margin-top:10%;z-index:2;" class="white-text hide-on-small-only">M E N U</h1>
 		<h1 style="font-size:8em;text-align: center; margin-top:10%;z-index:2;" class="white-text hide-on-med-and-up">M E<br>N U</h1>
 	</div>
@@ -30,7 +51,7 @@
 	<div class="section" style="position:relative;">
 
 
-		<div class="z-depth-5 img2" style="background-color:rgba(184,188,77,.9); min-height:80%; min-width:120%; position:absolute; transform:translate(-5%,5%);">
+		<div class="z-depth-5" style="background-color:rgba(184,188,77,.9); min-height:80%; min-width:120%; position:absolute; transform:translate(-5%,5%);">
 		</div>
 		<div class="z-depth-5 card2">
 			<div class="divider" style="width:100%;"></div>
@@ -41,12 +62,15 @@
 			<h3 class="center">Wine $ BRIe</h3>
 			<div class="divider" style="width:100%;"></div>
 			<div class="divider" style="width:100%;"></div>
-			<br>
 			<p class="center">Our most delicious section of cheeses with our wide ranges of wines from teh cellar.</p>
 			<div class="divider" style="width:100%;"></div>
 		</div>
-		<div class="z-depth-5 img2" style="">
-			<img src="https://previews.123rf.com/images/denira/denira1402/denira140200040/25778068-Fresh-green-vegetables-on-a-rustic-wooden-table--Stock-Photo.jpg">
+		<div id="img2thing" class=" img2" style="height:85%;">
+
+			<div class="z-depth-5 animation-element slide-right"style="overflow:hidden; max-height:100%;" id="img2thingthing">
+				<img src="https://previews.123rf.com/images/denira/denira1402/denira140200040/25778068-Fresh-green-vegetables-on-a-rustic-wooden-table--Stock-Photo.jpg">
+			</div>
+
 		</div>
 	</div>
 
@@ -76,7 +100,7 @@
 			<div class="divider"></div>
 		</div>
 		<div class="z-depth-5" style="background-color:white; max-height:85%; max-width:60%; position:absolute; transform:translate(75%,-13%); overflow:hidden;">
-			<img src="https://previews.123rf.com/images/denira/denira1402/denira140200040/25778068-Fresh-green-vegetables-on-a-rustic-wooden-table--Stock-Photo.jpg">
+			<img src="https://previews.123rf.com/images/denira/denira1402/denira140200040/25778068-Fresh-green-vegetables-on-a-rustic-wooden-table--Stock-Photo.jpg" class="">
 		</div>
 
 	</div>

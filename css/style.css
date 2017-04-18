@@ -2,18 +2,6 @@
 .section{
 	padding:0px;
 }
-
-.row {
-	margin-bottom:0px;
-}
-
-#picture2{
-	background-color:#ff3f34;
-}
-#myDiv2{
-	background-color:rgba(0,0,0,.1) !important;
-	/*My computer cant see #f7f7f7 for some reason check later ---*/
-}
 .divider{
 	width:300px;
 	margin-top: 0px;
